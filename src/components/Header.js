@@ -236,10 +236,7 @@ function Header({tracks}) {
       .col-2 div .header-title { text-align: center;}
       .col-2 div p { text-align: center;}
 
-      .header-btn { 
-        display: flex;
-        /* justify-content: center; */
-      }
+      .header-btn { display: flex;}
 
       .btn-fill { padding: .8rem 3rem;}
       .btn-ghost { padding: .8rem 2rem;}
