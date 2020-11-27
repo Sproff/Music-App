@@ -2,15 +2,12 @@ import React, {useState} from 'react';
 import axios from 'axios'
 
 
-const Track = ({tracks}) => {
+const Track = ({tracks, Loader}) => {
 
     
     const [getLyrics, setLyrics] = useState('');
 
     const [showModal, setModal] = useState (false);
-
-   
-
 
    let clickHandler = (track_id) => {
      const getLyrics = `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${track_id}&apikey=a515d9a9d48ed2aa1d1b25c39e6584d4`
@@ -50,6 +47,9 @@ const Track = ({tracks}) => {
                     <th>Favourite</th>
                   </tr>
                 </thead>
+
+                {Loader && <h2>Loading Songs...</h2>}
+
                 {tracks.map((track, index) => (
                   <tbody key={track.track.album_id}>
                     <tr onClick={() => clickHandler(track.track.track_id)}  className="table-tr">

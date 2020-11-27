@@ -4,7 +4,7 @@ import Track from './Track';
 import HeaderStyle from '../styles/HeaderStyle';
 
 
-function Header({tracks}) {
+function Header({tracks, Loader}) {
 
     return (
           <HeaderStyle>
@@ -34,7 +34,7 @@ function Header({tracks}) {
               </div>
             </div>
 
-            <Track tracks={tracks} />
+            <Track tracks={tracks} loader={Loader}/>
           </HeaderStyle>
     )
 }

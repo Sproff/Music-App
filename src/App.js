@@ -31,7 +31,7 @@ function App() {
     <div className="App">
       
       {Loader && <LoaderStyle />}
-        <Header tracks={tracks} />
+        <Header tracks={tracks} loader={Loader}/>
       
     </div>
   );
