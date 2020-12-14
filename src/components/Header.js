@@ -9,7 +9,7 @@ function Header({tracks, Loader}) {
     return (
           <HeaderStyle>
             <div>
-              <h2 className="title">MUSIC APP</h2>
+              <h2 className="title">MyMusic</h2>
             </div>
             <div className="container">
               <div className="row">
